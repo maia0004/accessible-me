@@ -15,39 +15,54 @@
 <body>
   <div class="container">
     <div class="site-header">
-      <h1>Jam Box Studios</h1>
+      <h1 role="main">Jam Box Studios</h1>
       <div class="main-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
-        </ul>
+        <header>
+          <nav role="navigation"> 
+            <ul>
+              <li><a href="#home" aria-label="Go to home">Home</a></li>
+              <li><a href="#products" aria-label="Go to welcome">Products</a></li>
+              <li><a href="#reservation" aria-label="go to contact us">Reservation</a></li>
+              <li><a href="#studio" aria-label="go to address">Studio</a></li>
+            </ul>
+          </nav>
+        </header>
+
       </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      <img role="banner" src="https://placekitten.com/1200/900" class="banner">
     </div>
     <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+      <main id="home">
+      <h1 role="complementary">Welcome to Jam Box</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Temporibus laboriosam praesentium nostrum ipsa eveniet, officia 
+        deserunt cumque eius esse enim, ipsam accusantium autem nihil 
+        quaerat sequi perferendis optio quia veritatis.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam 
+        perferendis expedita sed itaque odit ipsam omnis, eos voluptates 
+        magni fugit culpa voluptatibus, inventore eaque, eligendi 
+        voluptatum! Voluptate iusto error voluptatibus.</p>
       <div class="owner">
-        <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+        <main id="products">
+        <h1 role="contentinfo">Meet the owner</h1>
+        <ul itemscope itemtype="httpe://schema.org/Person">
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="phone">Phone: 613-000-0000</li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+        <main id="studio">
+        <h1 role="region">Address</h1>
+        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="localName"> Jambox Studios</span>
+          <span itemprop="addressLocal"> 123 Guitar Road,</span>
+          <span itemprop="addressCountry"> Musicville, Danceistan</span>
+          <span itemprop="postalCode"> B3T 0L0</span>
         </p>
       </div>
       <div class="contact-section">
-        <h1>Contact Us</h1>
+        <main id="reservation">
+        <h1 role="search">Contact Us</h1>
         <form action="thanks.html">
           <label>Full Name</label>
           <input type="text" placeholder="Full Name">
